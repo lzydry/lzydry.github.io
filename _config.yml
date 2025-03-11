@@ -116,7 +116,7 @@ author:
   name             : "Drake Caruso"
   avatar           : "/assets/images/author.jpg"
   bio              : "I am a security researcher."
-  location         : "California"
+  location         : "United States"
   email            :
   links:
     - label: "Email"
@@ -133,7 +133,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/lzydry"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -149,7 +149,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/lzydry"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
