@@ -107,7 +107,7 @@ social:
 analytics:
   provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          : G-VZSH450RC9
+    tracking_id          : 10380770916
     anonymize_ip         : # true, false (default)
 
 
