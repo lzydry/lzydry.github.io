@@ -26,6 +26,22 @@
 &nbsp; Overall, the extraction of the device’s firmware proved challenging for this project despite the Universal Asynchronous Receiver / Transmitter (UART) through holes that the PCB supplied. On first inspection of the device’s board, the primary goal of firmware extraction was going to be via the ground (GND), receiver (RX), and transmitter (TX) with a Universal Serial Bus (USB) to 3pin Transistor-Transistor Logic (TTL) serial converter. The wire ends of the serial convertor did not provide enough contact and soldering them would prevent the device from closing to factory specifications, so a Japan Solderless Terminal (JST) SH 1.0mm pitch 3pin micro header was soldered to the board and plugged into with a JST to serial converter.
 For verification of a solid solder and U-Boot menu connection, it was determined that the required software for interfacing with the UART connection would be tested with PuTTY at 115200 bits per second, 8 data bits, no parity, 1 stop bit, and no flow control. Regrettably, the U-boot menu was inaccessible via PuTTY and Picocom on Linux; assumedly from a configuration of CONFIG_BOOTDELAY=-2 which prevented any interruption of the booting process. To overcome this obstacle, a HydraBus and Small Outline Integrated Circuit 8pin (SOIC-8) clip were acquired to extract firmware from the XMC-SPI NOR flash chip (XM25QH256C) with Flashrom in serprog mode. Once the firmware was extracted, manual and automatic analysis occurred with Binwalk, Ghidra, Open Firmware Reverse Analysis Konsole (OFRAK), and the Embedded Analysis (EMBA) Toolkit.
 
+![20240628_011910157_iOS](https://github.com/user-attachments/assets/86e74cfd-162c-4c8a-872c-07ede7890163)
+
+![U-Boot](https://github.com/user-attachments/assets/a514be17-78bd-49d3-ba00-0ba6f3caeaba)
+
+![DO_on_FLASH](https://github.com/user-attachments/assets/f867b432-4a72-47d8-abe8-c0d48513909e)
+
+![20240701_224357678_iOS](https://github.com/user-attachments/assets/64a580e9-258a-49f0-ab39-072793fea98e)
+
+![20240701_223930784_iOS](https://github.com/user-attachments/assets/80599e9d-9435-42f7-98bb-9efd15a75003)
+
+![Extraction1](https://github.com/user-attachments/assets/9aca96c2-a7f4-4c21-9b87-6bf153679c94)
+
+![Extraction2](https://github.com/user-attachments/assets/26430839-a5ba-46bb-8f00-81a06c89f134)
+
+![extracted_files](https://github.com/user-attachments/assets/2d0bd0a9-7b63-4bc0-bf4a-750db792f873)
+
 
 ## Results
 &nbsp; In this section, the results of reverse engineering the IoT device’s networking protocols, android application, and firmware will transpire. After successful implementation and careful testing, it is determined that the device is susceptible to command execution, certificate attacks, Man-in-the-Middle attacks, web attacks, and various other categories of attacks that result from insecure coding practices.
@@ -90,3 +106,7 @@ I8 Lack of Device Management
 I9 Insecure Default Settings
 I10 Lack of Physical Hardening
 &nbsp; In comparison to the results of this project, the IoT device failed sections I1, I2, I5, I6, I7, I8, and I9 of OWASP’s list. There were multiple indications of hardcoded passwords, insecure network utilization of HTTP, insecure components, insecure privacy protection, data storage, and default settings.
+
+![JUAN_DEV](https://github.com/user-attachments/assets/2991fa8e-92e7-4fe1-89c0-ee1b2efd26d6)
+
+![password_string](https://github.com/user-attachments/assets/0877444e-8922-4ea7-9ced-355f8791331a)
