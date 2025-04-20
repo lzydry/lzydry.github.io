@@ -88,6 +88,8 @@ During manual source code analysis of the APK file, the following 19 vulnerabili
 18. Insecure Deserialization
 19. Insecure or Outdated Libraries
 
+![CMD_Execution](https://github.com/user-attachments/assets/e05982d5-2526-476a-ae5d-0a3bcae53662)
+
 &nbsp; Out of 19 vulnerable categories, 11 were present within the application code, as shown in Appendix C. There were multiple instances of using SharedPreferences.Editor to store all types of data to include access_token, auth_code, KEY_USER_PWD, and other keys. No occurrences of the hardcoded client.execute() were found, but there are hardcoded strings such as “http://”. An instance of SQL injection for FtsTableInfo and readOptions was located, but there is no user input. There are over 835 instances of intent.putExtra where potentially sensitive data is transmitted, such as keys and tokens. Next, multiple instances of hardcoded credentials and an abundance of printStackTrace() results (2327) were found in the source code. There is no permission enforcement regarding intents and no processReceivedData(data). After searching the code, a total of 84 results for new Random() were found, and there is no code to trust all certificates. There are 15 results for editor.putString() that contain settings and configuration info, while others include Facebook Tokens. Furthermore, an instance of deserialization was observed on the bArr object.
 
 ## Firmware
