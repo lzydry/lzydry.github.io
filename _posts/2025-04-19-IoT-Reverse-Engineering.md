@@ -1,4 +1,4 @@
-![Websocket_Wireshark2](https://github.com/user-attachments/assets/fc79c6dc-3759-426d-8e86-e7bcb2440e89)# WESECUU IoT Security Light Bulb System Security Review through Reverse Engineering
+# WESECUU IoT Security Light Bulb System Security Review through Reverse Engineering
 
 ## Research Goals
 &nbsp; For this research project, three objectives were devised that would highlight the overall security posture of the IoT device. These objectives cover reverse engineering of the IoT device from an external and internal hardware perspective. The objectives are as follows:
