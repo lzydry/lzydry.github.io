@@ -1,0 +1,14 @@
+##WESECUU IoT Security Light Bulb
+System Security Review through Reverse Engineering
+
+# Research Goals
+For this research project, three objectives were devised that would highlight the overall security posture of the IoT device. These objectives cover reverse engineering of the IoT device from an external and internal hardware perspective. The objectives are as follows:
+1. To assess the network protocols and API interactions of the WEESECUU Light Bulb Security Camera.
+2. To assess the firmware security of the Anyka AK3918AV100 in comparison to its predecessor the Anyka AK3918EV300+ 32-bit ARM-based CPU.
+3. To measure the security of the WESECUU Light Bulb Security Camera in comparison to trends regarding IoT security.
+
+# Approach/Research Method
+During this project, an outside-in experimental approach was taken to reverse engineer the IoT device. This method was appropriate and effective for this research project because of the IoT device form factor and volatility. It was apparent that this project would require the disassembly of the device and handling of the Primary Control Board (PCB) for chipset analysis and eventual firmware extraction. Due to the micro size of IoT devices, they are susceptible to accidental damage and bricking. For this approach, the device had to be reverse engineered externally before internally to avoid project delays from a damaged device.
+
+# Implementation
+To implement a logical approach to this project, this project started with nonvolatile testing of external facing services for the IoT device, including network analysis comprised of two areas: Bluetooth and Wi-Fi. Subsequently, a copy of the EseeCloud applications .apk file was obtained from apkpure to commence static and dynamic source code analysis. Afterwards, firmware was extracted from the device to perform manual and automated analysis. A further look into the implementation process for each section is in subsequent sections. For the results of these implementations, all findings are in the process of responsible disclosure to the manufacturer.
