@@ -16,8 +16,10 @@ To implement a logical approach to this project, this project started with nonvo
 ##Networking Analysis
 ###Bluetooth (BLE)
 Although an unfamiliar topic, research into BLE security testing provided ample information regarding the development of test cases. These test cases involved the examination of BLE and MQTT traffic within Wireshark, and the ability to connect to the IoT device’s BLE signal. Performing these test cases would require new tools such as nRF sniffers and external capture plugins for Wireshark. An nRF sniffer is a firmware programmed onto a Development Kit (DK) or USB dongle like the ADAFruit BLE Sniffer used in this project. Besides the external capture plugins, Python 3 was a prerequisite to enable the capturing of BLE traffic on Wireshark’s COM3 interface. Lastly, the nRF Connect IOS or Android application was acquired and integrated into my testing.
+
 ###Wireless Fidelity (Wi-Fi)
 To begin searching for vulnerabilities in the IoT’s Wi-Fi implementation, the device had to be examined from two vantage points: local hotspot and wireless router. The device had to be tested from an unconfigured and configured state as certain hardware was enabled and disabled. For example, the unconfigured device broadcasts its hotspot labeled IPCE800C80A18572 with a password of 11111111 but does not when configured. This configured state is an enabling act for Wi-Fi connectivity to a Wi-Fi routing device within the EseeCloud application.
+
 ###Android Application Analysis
 While the EseeCloud application used in this project was an iOS application, an Android Application Package (APK) was reverse engineered as it was easily accessible via apkpure. Apkpure provided the .apk file at version 3.9.6.8, as indicated in the file name EseeCloud\(IP\ Pro,\ VR\ Cam\)_3.9.6.8_APKPure.apk. The apk file could not be analyzed in its current state so further tools needed to be implemented. These tools were defined as apktool, dex2jar, and APKHunt. Before obtaining further tools or performing actions, goals were developed for this testing. These goals were defined as the ability to manually and automatically analyze the .apk file along with capturing and deciphering web traffic of the iOS application in Burp Suite. Understanding the underlying source code would provide insight into the responses and requests processed by Burp Suite’s proxy.
 
@@ -27,9 +29,13 @@ For verification of a solid solder and U-Boot menu connection, it was determined
 
 ##Results
 In this section, the results of reverse engineering the IoT device’s networking protocols, android application, and firmware will transpire. After successful implementation and careful testing, it is determined that the device is susceptible to command execution, certificate attacks, Man-in-the-Middle attacks, web attacks, and various other categories of attacks that result from insecure coding practices.
+
 ###Networking Protocols
+
 ####Bluetooth (BLE)
 Initial inspection of BLE traffic on the COM3 interface within Wireshark provided limited information for further testing. There is no Message Queuing Telemetry Transport (MQTT) traffic passed, indicating that the IoT device does not employ the protocol. An attempt to connect to the device (IPCE800C80A1_8572) through the nRF Connect IOS application was made, but it refused any BLE connections (Appendix A). This result suggested that the device was looking for a unique advertisement that only the EseeCloud application emitted, as Wireshark showed it was scanning all the BLE advertising devices within the limited 80-meter indoor range (Appendix A). If so, the device would be vulnerable to spoofed BLE advertising.
+
+
 ####Wireless Fidelity (Wi-Fi)
 Appendix A references the results of this section. Upon connecting to the device’s hotspot, it was evident the device assigned itself as the default gateway, accessible at 172.14.10.1, and an internal IP address of 172.14.10.2 to the smartphone. After conducting a Nmap scan of the device from both vantage points, there was no difference in the accessible ports. Nmap provided two open ports for further testing: 80 and 1000. Unfortunately, the service on port 80 only contained an empty directory at URI /snapshot, while port 10000 did not work in a web browser, and Netcat prompted a forbidden HTTP access.
 As a last resort for network analysis, the device’s network traffic was inspected to determine if it was secure through HTTPS. During an initial inspection, traffic was being missed from the IoT device to the router, so a middleman was set up by connecting the device and smartphone to an individual computer hotspot. This action led to the discovery of HTTP traffic containing secure nonce and accesskey information during the initial connection establishment from the EseeCloud application and the IoT device.
