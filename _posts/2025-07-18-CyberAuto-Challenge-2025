@@ -1,7 +1,7 @@
-Introduction
+# Introduction
 As a graduate student, it was an honor to attend the CyberAuto Challenge from July 14th to July 18th, 2025, in Detroit, Michigan. This event has been running annually since its establishment in 2012, thanks to the industry's Titanium Sponsors Ford, Toyota, and Toyota Tsusho Systems US. Due to the mission statement of this event - inspiring and training the next generation workforce - it is no surprise that it is still running today and will continue in the future. The success of this event comes from the involvement of industry, government, and security researchers in aiding to mentor and nurture the younger generation within the automotive Cybersecurity space. 
 
-Day-to-Day
+# Day-to-Day
 To start, each student provides their areas of interest/expertise to aid the staff in pairing them up with the right team. These areas encompass Internal Combustion Engine (ICE), and Electrical Vehicles (EV), Radio Frequency (RF), Forensics, and Reverse Engineering. For my selection, I informed staff that I was interested in pursuing the reverse engineering and hardware side, as my interests and expertise reside within this area. After supplying this information, students are promptly informed of their team and their requirement to sign an NDA; so apologies for the lack of specifics in this post. 
 
 Some students may find the first day of the event challenging, as many are coming from diverse areas, including countries and time zones. It is taxing because the event kicks off at 8:00 AM and runs until 8:00 PM, and continues this way until Thursday. Besides going through the logistical discussions of orientation, legal, and introductions, the other topics covered were Controller Area Network (CAN) & Networks, Diagnostics over Internet Protocol (DoIP), and Software-Defined Radio (SDR)/Wireless. 
