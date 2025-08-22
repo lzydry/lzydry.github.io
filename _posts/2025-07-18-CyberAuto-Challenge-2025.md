@@ -13,23 +13,35 @@ Some students may find the first day of the event challenging, as many are comin
 
 In my opinion, I found the CAN & Networks and the SDR/Wireless sections to be exceptional. Before this event, I lacked familiarity with how automotive components interfaced and communicated with one another. “For those interested, the SDR/Wireless section offers an introduction to - or refresher on - key electrical engineering concepts related to the electromagnetic spectrum (e.g., radio frequencies). Students also learn wireless car hacking from DEFCON's Car Hacking Village Chief, Justin Montalbano. To end the day, students were selected to give talks on their current areas of research. One presentation caught my eye as it focused on the extraction and detection of Personally Identifiable Information (PII) within infotainment systems.
 
-<img width="624" height="416" alt="Picture2" src="https://github.com/user-attachments/assets/d01a3313-6b12-4674-b03d-03b3fa575cbf" />
-### Figure 2 – Wireless Hacking with the Car Hacking Village
+<figure>
+  <img src="https://github.com/user-attachments/assets/d01a3313-6b12-4674-b03d-03b3fa575cbf"
+       width="624" height="416" alt="Picture2">
+  <figcaption><b>Figure 2 –</b> Wireless Hacking with the Car Hacking Village</figcaption>
+</figure>
 
 Next, on the second day of the CyberAuto Challenge, students are introduced to topics surrounding Cellular Networks, Phone Application Attacks, and the Forensics of Automotive Systems. As I have the privilege of testing phone applications from time to time, the Phone Application Attacks piece was of high interest. This section involved intercepting requests and responses via the phone application through Burp Suite's proxy feature. It was intriguing to conduct an analysis and exploitation of the various APIs. These APIs conducted actions on the vehicle through the phone application, such as locking and unlocking the car. Due to the progressive advancement of car technology, newer features would result in additional potential affects and attack surfaces. Another interesting topic, Forensics, was taught by industry professionals from Berla Corporation and the Michigan State Police. They emphasized the importance of tying vehicle data to the implications of a crime. A technical component of the course involved removing chips from circuit boards (chip-off) and soldering wires to extract data or firmware via SWD. The data/firmware extraction process involved a multimeter to test the continuity between chip pins and the corresponding debug ports on the back of the board. Once the soldering process was complete, students conducted data extraction via serial connection. 
 
 The third day, taught by the Idaho National Laboratory (INL), involved Electrical Infrastructure for Vehicles, Electrical Vehicles, and an E-CTF, followed by the Assessment ROE and Mission Planning. 
 
-<img width="624" height="416" alt="Picture3" src="https://github.com/user-attachments/assets/bed09551-6b1f-4109-9958-76247b0e3f3b" />
-### Figure 3 – Day 3 of Instruction
+<figure>
+  <img src="https://github.com/user-attachments/assets/bed09551-6b1f-4109-9958-76247b0e3f3b"
+       width="624" height="416" alt="Picture3">
+  <figcaption><b>Figure 3 –</b> Day 3 of Instruction</figcaption>
+</figure>
 
 Although a foreign topic, the intricacies of EV infrastructure were fascinating regarding the interaction between the charging station and vehicle components. Students participated in a hands-on observation of HomePlug Green PHY's Signal Level Attenuation Characteristic (SLAC) request/response protocol between the Electrical Vehicle Supply Equipment (EVSE) and Plug-in Electric Vehicle (PEV). 
 
-<img width="624" height="416" alt="Picture4" src="https://github.com/user-attachments/assets/3cd63ab8-c20d-4008-b7eb-d56f466e4a9d" />
-### Figure 4 – PVE and EVSE Lab
+<figure>
+  <img src="https://github.com/user-attachments/assets/3cd63ab8-c20d-4008-b7eb-d56f466e4a9d"
+       width="624" height="416" alt="Picture4">
+  <figcaption><b>Figure 4 –</b> PVE and EVSE Lab</figcaption>
+</figure>
 
-<img width="416" height="624" alt="Picture5" src="https://github.com/user-attachments/assets/6fec521b-8a64-4363-bef6-f08e6f711a78" />
-### Figure 5 – Level 1 Charger Testing
+<figure>
+  <img src="https://github.com/user-attachments/assets/6fec521b-8a64-4363-bef6-f08e6f711a78"
+       width="416" height="624" alt="Picture5">
+  <figcaption><b>Figure 5 –</b> Level 1 Charger Testing</figcaption>
+</figure>
 
 For students interested in the E-CTF, there were stations with unique challenges that involved CAN manipulation, data extraction, and reverse engineering, followed by learning concepts like EV infrastructure. The team with the highest score at the end of the day is awarded a prize, for instance, a Flipper Zero.
 
