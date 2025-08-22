@@ -6,8 +6,10 @@ To start, each student provides their areas of interest/expertise to aid the sta
 
 Some students may find the first day of the event challenging, as many are coming from diverse areas, including countries and time zones. It is taxing because the event kicks off at 8:00 AM and runs until 8:00 PM, and continues this way until Thursday. Besides going through the logistical discussions of orientation, legal, and introductions, the other topics covered were Controller Area Network (CAN) & Networks, Diagnostics over Internet Protocol (DoIP), and Software-Defined Radio (SDR)/Wireless. 
 
-<img width="624" height="416" alt="Picture1" src="https://github.com/user-attachments/assets/bffa9878-e2fd-4cac-8483-dc0fba5160fb" "Day 1 DOIP Instruction"/>
-### Figure 1 – Day 1 DOIP Instruction
+<figure>
+  <img src="https://github.com/user-attachments/assets/bffa9878-e2fd-4cac-8483-dc0fba5160fb" width="624" height="416" alt="Day 1 DOIP Instruction">
+  <figcaption><b>Figure 1:</b> Day 1 DOIP Instruction</figcaption>
+</figure>
 
 In my opinion, I found the CAN & Networks and the SDR/Wireless sections to be exceptional. Before this event, I lacked familiarity with how automotive components interfaced and communicated with one another. “For those interested, the SDR/Wireless section offers an introduction to - or refresher on - key electrical engineering concepts related to the electromagnetic spectrum (e.g., radio frequencies). Students also learn wireless car hacking from DEFCON's Car Hacking Village Chief, Justin Montalbano. To end the day, students were selected to give talks on their current areas of research. One presentation caught my eye as it focused on the extraction and detection of Personally Identifiable Information (PII) within infotainment systems.
 
